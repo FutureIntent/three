@@ -1,11 +1,11 @@
 import { createContext, useState } from "react"
 
 interface ThreeContextInterface {
-    grid: any
+    dummy: any
 }
 
 const initialContext: ThreeContextInterface = {
-    grid: null
+    dummy: null
 }
 
 export const ThreeContext: React.Context<any> = createContext(initialContext);

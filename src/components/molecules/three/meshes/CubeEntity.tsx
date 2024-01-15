@@ -11,7 +11,7 @@ const CubeEntity = () => {
   const y = useMotionValue(1.1);
 
   const scale = useMotionValue(1);
-  const color = useTransform(scale, [1, 1.5], ['#FF1493', '#DC143C']);
+  const color = useTransform(scale, [1, 1.5], ['#ffc800', '#e69d00']);
 
   const handleClick = () => {
     console.log('click');
@@ -28,7 +28,7 @@ const CubeEntity = () => {
   }
 
   return (
-    <motion.mesh position={[0, y, 4.5]} ref={cubeRef} onClick={handleClick} initial={{ x: -10 }} animate={{ x: 0, transition: { delay: 0.5, duration: 1, type: 'spring' } }} onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} scale={scale}>
+    <motion.mesh castShadow={true} position={[0, y, 4.5]} ref={cubeRef} onClick={handleClick} initial={{ x: -10 }} animate={{ x: 0, transition: { delay: 0.5, duration: 1, type: 'spring' } }} onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} scale={scale}>
       <motion.boxGeometry args={[0.7, 1.1, 0.05]} />
       <motion.meshStandardMaterial color={color} metalness={1} roughness={0.7} />
     </motion.mesh>

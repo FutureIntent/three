@@ -23,9 +23,7 @@ const Three2 = () => {
     return (
         <>
             <color args={["#000000"]} attach="background" />
-            {/* <ambientLight intensity={0.5} color={'#FFFFFF'} /> */}
-            {/* <directionalLight color="white" intensity={5} position={[0, 1.2, 4.6]} /> */}
-            <motion.spotLight color={'#DAA520'} position={[0, 2, 6]} intensity={50} castShadow={true} penumbra={1} />
+            <motion.spotLight color={'#DAA520'} position={[0.1, 2, 6]} intensity={50} castShadow={true} penumbra={1} />
             <PlaneEntity />
             <CubeEntity />
         </>

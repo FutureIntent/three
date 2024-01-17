@@ -23,7 +23,6 @@ function App() {
       <ThreeContextProvider>
         <ThreeContainer id='canvas_container'>
           <Canvas shadows={true} camera={{ position: [0, 1.2, 0], rotation: [0, 0, 0] }}>
-            {/* <Three /> */}
             <Three2 />
           </Canvas>
         </ThreeContainer>

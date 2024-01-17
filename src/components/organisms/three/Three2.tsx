@@ -1,24 +1,25 @@
 import { useThree } from "@react-three/fiber";
 import PlaneEntity from "../../molecules/three/meshes/PlaneEntity";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CubeEntity from "../../molecules/three/meshes/CubeEntity";
 import { animate, useMotionValue, useMotionValueEvent } from "framer-motion";
 import { motion } from "framer-motion-3d";
+import { ThreeContext } from "../../../contexts/three/threeContext";
 
 const Three2 = () => {
-
-    const [translateZ, setTranslateZ] = useState<number>(0);
     const z = useMotionValue(0);
 
-    useThree(({ camera }) => camera.position.z = translateZ);
+    const threeHook = useThree();
 
-    useEffect(() => {
-        animate(z, [0, 6], { duration: 1, ease: 'easeOut' });
-    }, []);
+    const {setThree} = useContext(ThreeContext);
 
-    useMotionValueEvent(z, "change", (latest) => {
-        setTranslateZ(latest);
-    });
+    // useEffect(() => {
+    //     animate(z, [0, 6], { duration: 1, ease: 'easeOut' });
+    // }, []);
+
+    // useMotionValueEvent(z, "change", (latest) => {
+    //     threeHook.camera.position.z = latest;
+    // });
 
     return (
         <>

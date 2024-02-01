@@ -1,25 +1,27 @@
 import { useThree } from "@react-three/fiber";
-import PlaneEntity from "../../molecules/three/meshes/PlaneEntity";
-import { useContext, useEffect, useState } from "react";
-import CubeEntity from "../../molecules/three/meshes/CubeEntity";
+import PlaneEntity from "@components/molecules/three/meshes/PlaneEntity";
+import { useContext, useEffect } from "react";
+import CubeEntity from "@components/molecules/three/meshes/CubeEntity";
 import { animate, useMotionValue, useMotionValueEvent } from "framer-motion";
 import { motion } from "framer-motion-3d";
-import { ThreeContext } from "../../../contexts/three/threeContext";
+import { ThreeContext } from "@contexts/three/threeContext";
 
 const Three2 = () => {
+
     const z = useMotionValue(0);
 
     const threeHook = useThree();
 
-    const {setThree} = useContext(ThreeContext);
+    const {three} = useContext(ThreeContext);
 
-    // useEffect(() => {
-    //     animate(z, [0, 6], { duration: 1, ease: 'easeOut' });
-    // }, []);
+    useEffect(() => {
+        animate(z, [0, three.camera.position.z], { duration: 1, ease: 'easeOut' });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    // useMotionValueEvent(z, "change", (latest) => {
-    //     threeHook.camera.position.z = latest;
-    // });
+    useMotionValueEvent(z, "change", (latest) => {
+        threeHook.camera.position.z = latest;
+    });
 
     return (
         <>

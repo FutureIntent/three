@@ -1,13 +1,35 @@
-import { RootState } from "@react-three/fiber";
 import { createContext, useState } from "react"
 
+interface CameraInterface {
+    position: {
+        x: number,
+        y: number,
+        z: number
+    },
+    rotation: {
+        x: number,
+        y: number,
+        z: number
+    }
+}
 
 interface ThreeContextInterface {
-    threeInstance: RootState | undefined
+    camera: CameraInterface
 }
 
 const initialContext: ThreeContextInterface = {
-    threeInstance: undefined
+    camera: {
+        position: {
+            x: 0,
+            y: 1.2,
+            z: 6
+        },
+        rotation: {
+            x: 0,
+            y: 0,
+            z: 0
+        } 
+    }
 }
 
 export const ThreeContext: React.Context<any> = createContext(initialContext);

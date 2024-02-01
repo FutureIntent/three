@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import Three2 from './components/organisms/three/Three2';
-import ThreeContextProvider from './contexts/three/threeContext';
+import Three2 from '@components/organisms/three/Three2';
+import ThreeContextProvider from '@contexts/three/threeContext';
 import { Canvas } from '@react-three/fiber';
 
 const AppContent = styled.div`

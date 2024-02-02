@@ -28,12 +28,12 @@ const Three2 = () => {
         <>
             <Environment
                 background={true}
-                blur={0} // blur factor between 0 and 1 (default: 0, only works with three 0.146 and up)
-                files={['corona_ft.png', 'corona_bk.png', 'corona_up.png', 'corona_dn.png', 'corona_lf.png', 'corona_rt.png']}
+                blur={0}
+                files={['corona_lf.png', 'corona_rt.png', 'corona_up.png', 'corona_dn.png', 'corona_ft.png', 'corona_bk.png']}
                 path="textures/skybox/"
             />
             <color args={["#000000"]} attach="background" />
-            <motion.spotLight color={'#DAA520'} position={[0.1, 2, 6]} intensity={50} castShadow={true} penumbra={1} />
+            <motion.spotLight color={'#FFFFFF'} position={[0.1, 2, 6]} intensity={70} castShadow={true} penumbra={1} />
             <PlaneEntity />
             <CubeEntity />
         </>

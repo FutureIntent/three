@@ -42,8 +42,8 @@ const CubeEntity = () => {
       <motion.meshStandardMaterial attach="material-0" {...cubeEdgeTextures} metalness={0.9} roughness={0.2} color={color} />
       <motion.meshStandardMaterial attach="material-1" {...cubeEdgeTextures} metalness={0.9} roughness={0.2} color={color} />
       <motion.meshStandardMaterial attach="material-2" {...cubeEdgeTextures}  metalness={0.9} roughness={0.2} color={color} />
-      <motion.meshStandardMaterial attach="material-3" {...cubeEdgeTextures}  metalness={0.9} roughness={0.2}  color={color} />
-      <motion.meshStandardMaterial attach="material-4" {...cubeFrontTextures} metalness={0.8} roughness={0.7}  color={color} />
+      <motion.meshStandardMaterial attach="material-3" {...cubeEdgeTextures}  metalness={0.9} roughness={0.2} color={color} />
+      <motion.meshStandardMaterial attach="material-4" {...cubeFrontTextures} metalness={0.8} roughness={0.7} color={color} />
       <motion.meshStandardMaterial attach="material-5" {...cubeBackTextures} metalness={1} roughness={0.1} color={color} />
     </motion.mesh>
   );

@@ -1,10 +1,10 @@
 
 export const cubeFront = {
-    map: 'textures/cube/front/Sci-Fi_Padded_Fabric_001_basecolor.jpg',
-    aoMap: 'textures/cube/front/Sci-Fi_Padded_Fabric_001_ambientOcclusion.jpg',
-    metalnessMap: 'textures/cube/front/Sci-Fi_Padded_Fabric_001_metallic.jpg',
-    normalMap: 'textures/cube/front/Sci-Fi_Padded_Fabric_001_normal.jpg',
-    roughnessMap: 'textures/cube/front/Sci-Fi_Padded_Fabric_001_roughness.jpg',
+    map: 'textures/cube/front/Abstract_011_basecolor.jpg',
+    aoMap: 'textures/cube/front/Abstract_011_ambientOcclusion.jpg',
+    metalnessMap: 'textures/cube/front/Abstract_011_metallic.jpg',
+    normalMap: 'textures/cube/front/Abstract_011_normal.jpg',
+    roughnessMap: 'textures/cube/front/Abstract_011_roughness.jpg',
 }
 
 export const cubeBack = {
